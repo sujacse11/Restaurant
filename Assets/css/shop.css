@@ -11,7 +11,7 @@ body {
 /* HERO BACKGROUND */
 .hero {
     height: 80vh;
-    background: url('/example/Assets/images/food.jpg') center/cover no-repeat;
+    background: url('./Assets/images/food.jpg') center/cover no-repeat;
     position: relative;
     color: white;
     background-size:cover;
