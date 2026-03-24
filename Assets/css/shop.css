@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HERO BACKGROUND */
+.hero {
+    height: 80vh;
+    background: url('/example/Assets/images/food.jpg') center/cover no-repeat;
+    position: relative;
+    color: white;
+    background-size:cover;
+    
+  
+}
+
+/* DARK OVERLAY */
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: rgba(0,0,0,0.6);
+}
+
+/* TOP BAR */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 60px;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    position: relative;
+    z-index: 1;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+    position: absolute;
+    top: 35px;
+    background: white;
+    color: black;
+    list-style: none;
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s;
+}
+
+.dropdown-menu li a {
+    color: black;
+    padding: 12px;
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* BUTTON OUTLINE */
+.btn-outline {
+    border: 1px solid white;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+
+
+
+/* HERO CONTENT */
+.hero-content {
+  position: relative;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+
+hero-content h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 88px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+
+/*EMPTY SECTION*/
+
+/* SECTION */
+.cart-empty {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f6f3;
+}
+
+/* BOX */
+.cart-box {
+  text-align: center;
+}
+
+/* TEXT */
+.cart-text {
+  font-size: 18px;
+  color: #333;
+  
+
+}
+
+/* BUTTON */
+.cart-btn {
+  display: inline-block;
+  border: 1px solid #000;
+  padding: 12px 30px;
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+/* HOVER */
+.cart-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+
+/* FOOTER SECTION */
+.footer {
+  background: #05070d;
+  color: #fff;
+  padding: 90px 8% 40px;
+}
+
+/* GRID */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+}
+
+/* LOGO */
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* TEXT */
+.footer-col p {
+  font-size: 14px;
+  color: #bbb;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+/* HEADINGS */
+.footer-col h4 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+/* WORKING HOURS ALIGN */
+.hours span {
+  float: right;
+  color: #fff;
+}
+
+/* HAPPY */
+.happy {
+  margin-top: 10px;
+}
+
+/* SOCIALS */
+.socials {
+  margin-top: 20px;
+}
+
+.socials i {
+  margin-right: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.socials i:hover {
+  color: #e65c00;
+}
+
+/* NEWSLETTER */
+.newsletter {
+  display: flex;
+  border-bottom: 1px solid #444;
+  margin: 15px 0;
+}
+
+.newsletter input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 10px 0;
+  outline: none;
+}
+
+.newsletter button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* CHECKBOX */
+.checkbox {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.checkbox input {
+  margin-right: 8px;
+}
+
+/* ================= BOTTOM ================= */
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 25px;
+  border-top: 1px solid #222;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 13px;
+}
+
+/* LINKS */
+.footer-links a {
+  margin-left: 25px;
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* =============================== */
+@media (max-width: 768px) {
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .hours span {
+    float: none;
+    display: block;
+    margin-top: 5px;
+  }
+
+}

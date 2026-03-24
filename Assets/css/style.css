@@ -1,0 +1,1068 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('/example/Assets/images/banner1.jpg'),
+    url('/example/Assets/images/banner2.jpg');
+
+    background-size:  cover, cover,cover;
+    background-position:  center, center,center;
+    background-repeat: no-repeat;  
+    position: relative;
+    
+    color: white;
+    overflow:hidden;
+    animation: zoomBg 10s ease-in-out infinite alternate;
+}
+@keyframes zoomBg {
+  0% {
+    background-size: cover,110%, 100%;
+  }
+  100% {
+    background-size: cover, 120%, 110%;
+  }
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+}
+
+/* TOP BAR */
+.top-bar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 60px;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+
+/* NAVBAR */
+.navbar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
+
+/* LOGO */
+.logo {
+  font-size: 28px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* MENU CENTER */
+.menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  align-items: center;
+}
+
+/* LINKS */
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: black;
+  min-width: 180px;
+  list-style: none;
+  
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.1s;
+}
+
+/* DROPDOWN LINKS */
+.dropdown-menu li a {
+  color: white;
+  padding: 12px 15px;
+  display: block;
+  font-family: Jost, sans-serif;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+/* HOVER SHOW */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+/* BUTTON */
+.btn-outline {
+  border: 1px solid white;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+}
+.btn-outline:hover{
+  background-color: aliceblue;
+  color:black;
+}
+
+/* ================= ================= */
+@media (max-width: 768px) {
+
+  .menu {
+    display: none;
+  }
+
+}
+
+
+/* HERO CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 90%;
+  margin: auto;
+}
+
+/* SUBTITLE */
+.subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.subtitle p {
+  letter-spacing: 3px;
+  font-family: Jost, sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.line {
+  width: 60px;
+  height: 1px;
+  background: white;
+}
+
+/* TITLE */
+.hero-content h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 88px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+
+
+/* TEXT */
+.desc {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+/* BUTTON */
+.btn-main {
+  background: #f26522;
+  padding: 14px 28px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transform: translateY(20px);
+ 
+}
+
+/* ================================== */
+@media (max-width: 768px) {
+
+  .top-bar {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .line {
+    width: 40px;
+  }
+
+}
+
+
+/* TASTE SECTION */
+/* ================= SECTION ================= */
+.taste-section {
+  background: #f3eee9;
+  padding: 140px 0;
+}
+
+/* WRAPPER */
+.taste-wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* ================= LEFT CONTENT ================= */
+.taste-text {
+  width: 45%;
+  position: sticky;
+  top: 120px; /* keeps content centered while scrolling */
+}
+
+/* TAG + LINE */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+
+  color: orangered;
+  font-family: Jost, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.tag::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background: orangered;
+}
+
+/* TITLE */
+.taste-text h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 74px;
+  font-weight: 600;
+  line-height: 74px;
+  margin-bottom: 20px;
+  color: #111;
+  
+}
+
+/* DESCRIPTION */
+.taste-text p {
+  color: #666;
+  font-family: Jost, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 29.88px;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+.btn-taste {
+  background: #e65c00;
+  color: #fff;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* ================= RIGHT IMAGES ================= */
+.taste-images {
+  width: 50%;
+  position: relative;
+  height: 1000px;
+}
+
+/* COMMON IMAGE */
+.img-box {
+  will-change: transform;
+}
+
+/* TOP RIGHT IMAGE (TALL + STICKY) */
+.img1 {
+  position: sticky;
+  top: 120px;
+  width: 75%;
+  margin-left: auto;
+  z-index: 2;
+}
+
+.img1 img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+/* BOTTOM LEFT IMAGE (OVERLAP) */
+.img2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  z-index: 3;
+}
+
+.img2 img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+
+
+/* ================= MENU SECTION ================= */
+.menu-section {
+  background: #ffffff; /* FULL WHITE */
+  padding: 100px 0;
+}
+
+/* WRAPPER */
+.menu-wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+}
+
+/* ================= CARD ================= */
+.menu-card {
+  flex: 1;
+  background: #fff;
+  padding: 35px 30px;
+  border-radius: 6px;
+
+  /* clean look */
+  border: 0px solid #eee;
+  box-shadow: none;
+
+  transition: 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ================= HEADINGS ================= */
+
+/* SMALL TITLE */
+.menu-card h3 {
+  text-align: center;
+  color: #e65c00;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+/* MAIN TITLE */
+.menu-card h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+/* ================= ITEMS ================= */
+.item {
+  margin-bottom: 22px;
+}
+
+/* ROW */
+.row {
+  display: flex;
+  align-items: center;
+}
+
+/* NAME */
+.name {
+  font-size: 16px;
+  color: #222;
+}
+
+/* DOT LINE */
+.dots {
+  flex: 1;
+  border-bottom: 1px dotted #ddd;
+  margin: 0 10px;
+}
+
+/* PRICE */
+.price {
+  font-size: 14px;
+  color: #222;
+}
+
+/* DESCRIPTION */
+.item p {
+  font-size: 12px;
+  color: #777;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* ================= BUTTONS ================= */
+.menu-buttons {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.menu-buttons a {
+  display: inline-block;
+  border: 1px solid #000;
+  padding: 12px 28px;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+/* HOVER */
+.menu-buttons a:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ================================= */
+
+@media (max-width: 576px) {
+
+  .menu-card {
+    padding: 25px 20px;
+  }
+
+  .menu-card h2 {
+    font-size: 22px;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 13px;
+  }
+
+}
+
+
+
+
+/* FOOD SECTION LEFT */
+.food-section {
+  background: #f3eee9;
+  padding: 120px 0;
+}
+
+/* CONTAINER */
+.food-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+/* ================= IMAGES ================= */
+.food-images {
+  width: 50%;
+  position: relative;
+}
+
+/* MAIN IMAGE */
+.img-main {
+  width: 80%;
+  margin-left: auto;
+}
+
+.img-main img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* SMALL IMAGE (OVERLAP) */
+.img-small {
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+  width: 60%;
+  z-index: 2;
+}
+
+.img-small img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* ================= CONTENT ================= */
+.food-content {
+  width: 50%;
+}
+
+/* TAG + LINE */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  color: #e65c00;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.tag::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background: #e65c00;
+}
+
+/* TITLE */
+.food-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+/* TEXT */
+.food-content p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+.btn-food {
+  background: #e65c00;
+  color: #fff;
+  padding: 12px 28px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* ================= ANIMATION ================= */
+
+/* IMAGE ZOOM */
+.food-images img {
+  transition: transform 0.6s ease;
+}
+
+.food-images:hover img {
+  transform: scale(1.05);
+}
+
+/* FADE UP */
+.food-content {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================== */
+@media (max-width: 768px) {
+
+  .food-container {
+    flex-direction: column;
+  }
+
+  .food-images,
+  .food-content {
+    width: 100%;
+  }
+
+  .img-small {
+    position: relative;
+    bottom: 0;
+    margin-top: 20px;
+  }
+
+}
+
+
+
+/* FOOD SECTION RIGHT*/
+.visit-section {
+  background: #f3eee9;
+  padding: 120px 0;
+}
+
+/* CONTAINER */
+.visit-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* ================= LEFT CONTENT ================= */
+.visit-content {
+  width: 45%;
+  text-align: center;
+}
+
+/* TAG + LEFT LINE */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  color: #e65c00;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.tag::before {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background: #e65c00;
+}
+
+/* TITLE */
+.visit-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+/* TEXT */
+.visit-content p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* BUTTON */
+.btn-visit {
+  display: inline-block;
+  background: #e65c00;
+  color: #fff;
+  padding: 12px 30px;
+  margin-top: 15px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* ================= RIGHT IMAGES ================= */
+.visit-images {
+  width: 50%;
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+
+/* LEFT IMAGE */
+.img-left {
+  width: 50%;
+  margin-top: 80px;
+}
+
+.img-left img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* RIGHT IMAGE */
+.img-right {
+  width: 50%;
+}
+
+.img-right img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* ================= ANIMATION ================= */
+.visit-images img {
+  transition: transform 0.6s ease;
+}
+
+.visit-images img:hover {
+  transform: scale(1.05);
+}
+
+/* ================================ */
+@media (max-width: 768px) {
+
+  .visit-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .visit-content,
+  .visit-images {
+    width: 100%;
+  }
+
+  .visit-images {
+    flex-direction: column;
+  }
+
+  .img-left {
+    margin-top: 0;
+  }
+
+}
+
+
+
+
+/* RESERVATION SECTION */
+.reservation-sec {
+  position: relative;
+  height: 100vh;
+  background: url('/example/Assets/images/footer.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fcfafa;
+}
+
+/* DARK OVERLAY */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(61, 60, 60, 0.7);;
+}
+
+/* CONTAINER */
+.reserve-container {
+  position: relative;
+  width: 85%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+/* TITLE LINE */
+.reserve-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.reserve-title p {
+  color: #e65c00;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+/* LINES */
+.line {
+  width: 60px;
+  height: 1px;
+  background: #e65c00;
+}
+
+/* MAIN TITLE */
+.reserve-container h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 70px;
+  margin-bottom: 60px;
+}
+
+/* ================= FORM ================= */
+.reserve-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  
+}
+
+/* FIELD */
+.field {
+  flex: 1;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  padding-bottom: 10px;
+}
+
+/* INPUTS */
+select,
+input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: black;
+  font-size: 16px;
+  outline: none;
+}
+
+/* DATE ICON WHITE */
+input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  
+  
+}
+
+/* BUTTON */
+.btn-book {
+  background: #e65c00;
+  border: none;
+  padding: 16px 40px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.btn-book:hover {
+  background: #cc5200;
+}
+
+/* POWERED */
+.powered {
+  margin-top: 15px;
+  font-size: 12px;
+  color:white;
+  text-align: left;
+}
+
+/* ================= ANIMATION ================= */
+
+/* FADE IN */
+.reserve-container {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+  color: white;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================== */
+@media (max-width: 768px) {
+
+  .reservation-sec {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .reserve-container h1 {
+    font-size: 40px;
+  }
+
+  .reserve-form {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .btn-book {
+    width: 100%;
+  }
+
+}
+
+
+
+/* FOOTER SECTION */
+.footer {
+  background: #05070d;
+  color: #fff;
+  padding: 90px 8% 40px;
+}
+
+/* GRID */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+}
+
+/* LOGO */
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* TEXT */
+.footer-col p {
+  font-size: 14px;
+  color: #bbb;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+/* HEADINGS */
+.footer-col h4 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+/* WORKING HOURS ALIGN */
+.hours span {
+  float: right;
+  color: #fff;
+}
+
+/* HAPPY */
+.happy {
+  margin-top: 10px;
+}
+
+/* SOCIALS */
+.socials {
+  margin-top: 20px;
+}
+
+.socials i {
+  margin-right: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.socials i:hover {
+  color: #e65c00;
+}
+
+/* NEWSLETTER */
+.newsletter {
+  display: flex;
+  border-bottom: 1px solid #444;
+  margin: 15px 0;
+}
+
+.newsletter input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 10px 0;
+  outline: none;
+}
+
+.newsletter button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* CHECKBOX */
+.checkbox {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.checkbox input {
+  margin-right: 8px;
+}
+
+/* ================= BOTTOM ================= */
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 25px;
+  border-top: 1px solid #222;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 13px;
+}
+
+/* LINKS */
+.footer-links a {
+  margin-left: 25px;
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* =============================== */
+@media (max-width: 768px) {
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .hours span {
+    float: none;
+    display: block;
+    margin-top: 5px;
+  }
+
+}

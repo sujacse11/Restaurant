@@ -1,0 +1,274 @@
+.hero {
+  height: 300px;
+  background: url("/example/Assets/images/wine.jpg") center/cover no-repeat;
+  position: relative;
+}
+
+.overlay {
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 28px;
+  font-style: italic;
+}
+
+
+.reservation {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f7f7f7;
+}
+
+.sub {
+  font-size: 11px;
+  color: #c59d5f;
+  letter-spacing: 2px;
+}
+
+.reservation h2 {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.desc {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+/* FORM */
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form select,
+.form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  font-size: 13px;
+}
+
+.form button {
+  background: #c59d5f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+/**/
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 0;
+  background: #f7f7f7;
+}
+
+.card {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card span {
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+
+
+.locations {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 40px 20px;
+  background: #eee;
+  text-align: center;
+}
+
+.loc h4 {
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.loc p {
+  font-size: 12px;
+  color: #777;
+}
+
+.loc a {
+  font-size: 11px;
+  color: #c59d5f;
+  text-decoration: none;
+}
+
+
+
+/* FOOTER SECTION */
+.footer {
+  background: #05070d;
+  color: #fff;
+  padding: 90px 8% 40px;
+}
+
+/* GRID */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+}
+
+/* LOGO */
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* TEXT */
+.footer-col p {
+  font-size: 14px;
+  color: #bbb;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+/* HEADINGS */
+.footer-col h4 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+/* WORKING HOURS ALIGN */
+.hours span {
+  float: right;
+  color: #fff;
+}
+
+/* HAPPY */
+.happy {
+  margin-top: 10px;
+}
+
+/* SOCIALS */
+.socials {
+  margin-top: 20px;
+}
+
+.socials i {
+  margin-right: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.socials i:hover {
+  color: #e65c00;
+}
+
+/* NEWSLETTER */
+.newsletter {
+  display: flex;
+  border-bottom: 1px solid #444;
+  margin: 15px 0;
+}
+
+.newsletter input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 10px 0;
+  outline: none;
+}
+
+.newsletter button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* CHECKBOX */
+.checkbox {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.checkbox input {
+  margin-right: 8px;
+}
+
+/* ================= BOTTOM ================= */
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 25px;
+  border-top: 1px solid #222;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 13px;
+}
+
+/* LINKS */
+.footer-links a {
+  margin-left: 25px;
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* =============================== */
+@media (max-width: 768px) {
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .hours span {
+    float: none;
+    display: block;
+    margin-top: 5px;
+  }
+
+}
+
+
+
+
