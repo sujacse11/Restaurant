@@ -8,18 +8,26 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/* HERO */
 .hero {
   height: 300px;
   background: url("./Assets/images/wine.jpg") center/cover no-repeat;
   position: relative;
 }
 
+/* OVERLAY */
 .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.2);
+
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .logo {
@@ -28,7 +36,8 @@ body {
   font-style: italic;
 }
 
-<=============RESERVATION=========>
+
+/* ========= RESERVATION ========= */
 .reservation {
   text-align: center;
   padding: 80px 20px;
@@ -56,6 +65,7 @@ body {
 .form {
   display: flex;
   justify-content: center;
+  align-items: center;  
   gap: 10px;
   flex-wrap: wrap;
 }
@@ -63,7 +73,7 @@ body {
 .form select,
 .form input {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid 
   font-size: 13px;
 }
 
@@ -76,13 +86,15 @@ body {
 }
 
 
-/*=========CARDS==========*/
+/* ========= CARDS ========= */
 .cards {
   display: flex;
   justify-content: center;
+  align-items: center;   
   gap: 20px;
-  padding: 40px 0;
+  padding: 40px 20px;
   background: #f7f7f7;
+  flex-wrap: wrap;       
 }
 
 .card {
@@ -108,15 +120,16 @@ body {
 }
 
 
-
-
+/* ========= LOCATIONS ========= */
 .locations {
   display: flex;
   justify-content: center;
+  align-items: center;   
   gap: 60px;
   padding: 40px 20px;
   background: #eee;
   text-align: center;
+  flex-wrap: wrap;       
 }
 
 .loc h4 {
@@ -136,29 +149,25 @@ body {
 }
 
 
-
-/* FOOTER SECTION */
+/* ========= FOOTER ========= */
 .footer {
   background: #05070d;
   color: #fff;
   padding: 90px 8% 40px;
 }
 
-/* GRID */
 .footer-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 60px;
 }
 
-/* LOGO */
 .footer-logo {
   font-family: 'Playfair Display', serif;
   font-size: 32px;
   margin-bottom: 20px;
 }
 
-/* TEXT */
 .footer-col p {
   font-size: 14px;
   color: #bbb;
@@ -166,25 +175,21 @@ body {
   margin-bottom: 12px;
 }
 
-/* HEADINGS */
 .footer-col h4 {
   font-size: 14px;
   letter-spacing: 1px;
   margin-bottom: 25px;
 }
 
-/* WORKING HOURS ALIGN */
 .hours span {
   float: right;
   color: #fff;
 }
 
-/* HAPPY */
 .happy {
   margin-top: 10px;
 }
 
-/* SOCIALS */
 .socials {
   margin-top: 20px;
 }
@@ -199,7 +204,6 @@ body {
   color: #e65c00;
 }
 
-/* NEWSLETTER */
 .newsletter {
   display: flex;
   border-bottom: 1px solid #444;
@@ -222,7 +226,6 @@ body {
   cursor: pointer;
 }
 
-/* CHECKBOX */
 .checkbox {
   font-size: 13px;
   color: #aaa;
@@ -232,7 +235,8 @@ body {
   margin-right: 8px;
 }
 
-/* ================= BOTTOM ================= */
+
+/* ========= FOOTER BOTTOM ========= */
 .footer-bottom {
   margin-top: 60px;
   padding-top: 25px;
@@ -241,11 +245,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   font-size: 13px;
 }
 
-/* LINKS */
 .footer-links a {
   margin-left: 25px;
   color: #bbb;
@@ -257,28 +259,11 @@ body {
   color: #fff;
 }
 
-/* =============================== */
-@media (max-width: 768px) {
-
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-
-  .hours span {
-    float: none;
-    display: block;
-    margin-top: 5px;
-  }
-
-}
 
 
 
 
+
+
+
+ 
