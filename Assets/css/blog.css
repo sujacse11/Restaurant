@@ -11,9 +11,9 @@ body {
 /* HERO */
 .hero {
     height: 100vh;
-    background-image: url('./Assets/images/menu.jpg');
-    background-size:  cover;
-    background-position:  center;
+    background-image: (linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url('./Assets/images/menu.jpg');
+    background-size:  cover,cover;
+    background-position:  center,center;
     background-repeat: no-repeat;  
     position: relative;
     
