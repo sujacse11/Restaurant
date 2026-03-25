@@ -11,13 +11,13 @@ body {
 /* HERO */
 .hero {
     height: 100vh;
-    background-image: url('../Assets/images/menu.jpg');
+    background-image: url('./Assets/images/menu.jpg');
     background-size:  cover;
     background-position:  center;
     background-repeat: no-repeat;  
     position: relative;
     
-    color: white;
+    color: gray;
     overflow:hidden;
  
 }
